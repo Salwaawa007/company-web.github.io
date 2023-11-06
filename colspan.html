@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 400px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 400px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Salwa Nurazizah</h2>
+</header>
+
+<section>
+  <nav>
+    <ol>
+        <b>Bahasa yang dikuasai</b>
+      <li><a href="#">Indonesia</a></li>
+      <li><a href="#">Betawi</a></li>
+      <li><a href="#">Sunda</a></li>
+    </ol>
+  </nav>
+  
+  <article>
+    <h1>Biodata</h1>
+    <p>Salwa NurAzizah, Lahir di Tangerang Selatan. Alamat lengkap Jl Kp.Buaran lengkong karya rt001 rw 002 no.10, Serpong Utara</p>
+    <p>Sekolah di SMKN 6 KOTA TANGERANG SELATAN</p>
+    <img src="logonemtas.jpg" width="110px" alt="logo nemtas"></img>
+    
+    <h1>Makanan</h1>
+    <ul>
+       <li>Seblak</li>
+       <li>Mi Ayam</li>
+       <li>Dimsum</li>
+    </ul>
+
+  </article>
+</section>
+
+<footer>
+  <p>footer</p>
+</footer>
+
+</body>
+</html>
